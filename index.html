@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tulip Restaurant promo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Rozha+One&display=swap">
+<style>
+  html, body { margin: 0; background: #17081F; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #17081F; color: #FBEFE2; font-family: 'Hind Siliguri', system-ui, sans-serif; }
+  .scene { position: absolute; inset: 0; overflow: hidden; }
+  .display { font-family: 'Rozha One', Georgia, serif; font-weight: 400; }
+  .center { position: absolute; left: 0; right: 0; text-align: center; }
+  .glow { position: absolute; left: 140px; top: 330px; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(224,76,147,.55), rgba(224,76,147,0) 68%); }
+  .photo { position: absolute; border-radius: 40px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cap { position: absolute; left: 60px; right: 60px; font-size: 64px; line-height: 1.1; }
+  .row { position: absolute; left: 70px; right: 70px; display: flex; justify-content: space-between; align-items: baseline; font-size: 52px; border-bottom: 3px dashed rgba(251,239,226,.2); padding-bottom: 22px; }
+  .row b { color: #F4B63E; font-weight: 700; }
+  .chair { position: absolute; width: 90px; height: 78px; border-radius: 30px; background: #E04C93; }
+  .ring { position: absolute; left: 540px; top: 900px; border: 4px solid rgba(251,239,226,.28); border-radius: 50%; transform: translate(-50%, -50%); }
+</style>
+</head>
+<body>
+<div id="stage" data-composition-id="tulip" data-start="0" data-width="1080" data-height="1920">
+
+  <!-- Scene 1 (0-5s): tulip blooms, name appears -->
+  <div id="s1" class="scene clip" data-start="0" data-duration="5" data-track-index="0">
+    <div class="glow" id="s1glow"></div>
+    <svg id="tulip" viewBox="0 0 240 330" style="position:absolute;left:260px;top:260px;width:560px;height:770px;overflow:visible">
+      <defs>
+        <linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8CC2"/><stop offset="1" stop-color="#C42A6C"/></linearGradient>
+        <linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F06AA9"/><stop offset="1" stop-color="#8E1D52"/></linearGradient>
+        <linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E04C93"/><stop offset="1" stop-color="#A3225F"/></linearGradient>
+      </defs>
+      <path id="stem" pathLength="1" d="M120 318 C118 270 123 225 120 172" fill="none" stroke="#2FA36B" stroke-width="7" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+      <path id="leafL" d="M119 300 C70 285 52 240 60 200 C95 215 115 255 119 300Z" fill="#2FA36B" style="transform-box:fill-box;transform-origin:50% 100%"/>
+      <path id="leafR" d="M121 290 C165 276 186 238 180 206 C148 222 125 250 121 290Z" fill="#268A59" style="transform-box:fill-box;transform-origin:50% 100%"/>
+      <path id="pL" d="M118 182 C66 174 44 120 62 72 C88 86 110 114 118 182Z" fill="url(#b)" style="transform-box:fill-box;transform-origin:50% 100%"/>
+      <path id="pR" d="M122 182 C174 174 196 120 178 72 C152 86 130 114 122 182Z" fill="url(#c)" style="transform-box:fill-box;transform-origin:50% 100%"/>
+      <path id="pM" d="M120 188 C84 162 80 104 120 46 C160 104 156 162 120 188Z" fill="url(#a)" style="transform-box:fill-box;transform-origin:50% 100%"/>
+    </svg>
+    <div class="center display" id="s1title" style="top:1120px;font-size:260px;line-height:1">Tulip</div>
+    <div class="center" id="s1tag" style="top:1420px;font-size:56px;padding:0 90px">Multi-cuisine A.C. family restaurant</div>
+    <div class="center" id="s1city" style="top:1500px;font-size:48px;color:#C7B0D1">Bankura, West Bengal</div>
+  </div>
+
+  <!-- Scene 2 (5-12s): the food -->
+  <div id="s2" class="scene clip" data-start="5" data-duration="7" data-track-index="0">
+    <div class="center display" id="s2h" style="top:120px;font-size:110px">From our kitchen</div>
+    <div class="photo" id="ph1" style="left:60px;top:300px;width:960px;height:720px"><img src="assets/chicken.jpg" alt=""></div>
+    <div class="photo" id="ph2" style="left:60px;top:1060px;width:520px;height:700px"><img src="assets/drinks1.jpg" alt=""></div>
+    <div class="photo" id="ph3" style="left:610px;top:1060px;width:410px;height:700px"><img src="assets/biryani.jpg" alt="" style="object-position:30% 50%"></div>
+    <div class="cap display" id="c1" style="top:930px;text-shadow:0 4px 20px rgba(0,0,0,.8)">Chicken starters</div>
+    <div class="cap display" id="c2" style="top:1660px;text-shadow:0 4px 20px rgba(0,0,0,.8)">Layered drinks</div>
+    <div class="cap display" id="c3" style="top:1660px;left:640px;text-shadow:0 4px 20px rgba(0,0,0,.8)">Biryani</div>
+  </div>
+
+  <!-- Scene 3 (12-18s): the menu, prices as printed on the menu -->
+  <div id="s3" class="scene clip" data-start="12" data-duration="6" data-track-index="0">
+    <div class="center display" id="s3h" style="top:150px;font-size:130px">Our menu</div>
+    <div class="row" id="r1" style="top:430px"><span>Chicken Reshmi Butter Masala</span><b>₹240</b></div>
+    <div class="row" id="r2" style="top:600px"><span>Drum's of Heaven</span><b>₹240</b></div>
+    <div class="row" id="r3" style="top:770px"><span>Chilli Fish with Mustard Sauce</span><b>₹260</b></div>
+    <div class="row" id="r4" style="top:940px"><span>Fish Finger</span><b>₹250</b></div>
+    <div class="row" id="r5" style="top:1110px"><span>Tulip Special Hundi Biryani</span><b>₹260</b></div>
+    <div class="row" id="r6" style="top:1280px"><span>Tulip Special Veg Thali</span><b>₹150</b></div>
+    <div class="center" id="s3f" style="top:1560px;font-size:46px;color:#C7B0D1">Prices as printed on the menu</div>
+  </div>
+
+  <!-- Scene 4 (18-23s): book a table -->
+  <div id="s4" class="scene clip" data-start="18" data-duration="5" data-track-index="0">
+    <div class="center display" id="s4h" style="top:170px;font-size:130px">Book your table</div>
+    <div id="table" style="position:absolute;left:290px;top:640px;width:500px;height:500px;border-radius:50%;background:#33174A;border:6px solid rgba(251,239,226,.25)"></div>
+    <div id="candle" style="position:absolute;left:520px;top:860px;width:40px;height:70px;border-radius:8px;background:#FBEFE2"></div>
+    <div id="flame" style="position:absolute;left:526px;top:800px;width:28px;height:56px;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;background:#F4B63E"></div>
+    <div class="center" id="s4a" style="top:1370px;font-size:60px">Request a table on WhatsApp</div>
+    <div class="center display" id="s4b" style="top:1470px;font-size:84px;color:#F4B63E">+91 81456 43818</div>
+  </div>
+
+  <!-- Scene 5 (23-28s): where we are -->
+  <div id="s5" class="scene clip" data-start="23" data-duration="5" data-track-index="0">
+    <div class="center display" id="s5h" style="top:170px;font-size:130px">Find us</div>
+    <div class="ring" id="rg1" style="width:200px;height:200px"></div>
+    <div class="ring" id="rg2" style="width:400px;height:400px"></div>
+    <div class="ring" id="rg3" style="width:760px;height:760px"></div>
+    <svg id="pin" viewBox="0 0 48 64" style="position:absolute;left:480px;top:820px;width:120px;height:160px;overflow:visible">
+      <path d="M24 0 C10 0 0 10 0 24 C0 42 24 64 24 64 S48 42 48 24 C48 10 38 0 24 0Z" fill="#E04C93"/>
+      <path d="M24 38 C16 32 16 22 24 12 C32 22 32 32 24 38Z" fill="#FBEFE2"/>
+    </svg>
+    <div class="center" id="s5a" style="top:1330px;font-size:58px;padding:0 70px;line-height:1.25">285, Netajinagar, Katjuridanga, Bankura</div>
+    <div class="center" id="s5b" style="top:1500px;font-size:56px;color:#F4B63E;font-weight:700">Open every day, 11:30 AM to 10:30 PM</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+  const tl = gsap.timeline({ paused: true });
+  const ease = "power3.out";
+
+  /* Scene 1: 0-5s */
+  tl.from("#s1glow", { opacity: 0, scale: 0.6, duration: 1.6, ease }, 0);
+  tl.to("#stem", { strokeDashoffset: 0, duration: 1.0, ease: "power2.out" }, 0.2);
+  tl.from(["#leafL", "#leafR"], { scale: 0, duration: 0.8, stagger: 0.12, ease: "back.out(1.6)" }, 0.7);
+  tl.from("#pL", { rotation: 26, scale: 0.5, duration: 1.4, ease: "back.out(1.6)" }, 1.0);
+  tl.from("#pR", { rotation: -26, scale: 0.5, duration: 1.4, ease: "back.out(1.6)" }, 1.0);
+  tl.from("#pM", { scale: 0.55, duration: 1.4, ease: "back.out(1.6)" }, 0.9);
+  tl.from("#s1title", { opacity: 0, y: 70, duration: 0.9, ease }, 2.2);
+  tl.from("#s1tag", { opacity: 0, y: 40, duration: 0.7, ease }, 2.9);
+  tl.from("#s1city", { opacity: 0, y: 40, duration: 0.7, ease }, 3.2);
+  tl.to("#s1", { opacity: 0, duration: 0.4 }, 4.6);
+
+  /* Scene 2: 5-12s */
+  tl.from("#s2h", { opacity: 0, y: -50, duration: 0.7, ease }, 5.1);
+  tl.from("#ph1", { opacity: 0, x: -240, duration: 0.9, ease }, 5.5);
+  tl.from("#c1", { opacity: 0, y: 30, duration: 0.6, ease }, 6.2);
+  tl.from("#ph2", { opacity: 0, y: 200, duration: 0.9, ease }, 7.4);
+  tl.from("#c2", { opacity: 0, y: 30, duration: 0.6, ease }, 8.1);
+  tl.from("#ph3", { opacity: 0, x: 240, duration: 0.9, ease }, 9.4);
+  tl.from("#c3", { opacity: 0, y: 30, duration: 0.6, ease }, 10.1);
+  tl.fromTo(["#ph1 img", "#ph2 img", "#ph3 img"], { scale: 1 }, { scale: 1.12, duration: 6.5, ease: "none" }, 5.3);
+  tl.to("#s2", { opacity: 0, duration: 0.4 }, 11.6);
+
+  /* Scene 3: 12-18s */
+  tl.from("#s3h", { opacity: 0, y: -50, duration: 0.7, ease }, 12.1);
+  ["#r1", "#r2", "#r3", "#r4", "#r5", "#r6"].forEach((id, i) => {
+    tl.from(id, { opacity: 0, x: i % 2 ? 160 : -160, duration: 0.6, ease }, 12.7 + i * 0.5);
+  });
+  tl.from("#s3f", { opacity: 0, duration: 0.6 }, 16.0);
+  tl.to("#s3", { opacity: 0, duration: 0.4 }, 17.6);
+
+  /* Scene 4: 18-23s */
+  tl.from("#s4h", { opacity: 0, y: -50, duration: 0.7, ease }, 18.1);
+  tl.from("#table", { scale: 0, duration: 0.9, ease: "back.out(1.4)" }, 18.5);
+  tl.from(["#candle", "#flame"], { opacity: 0, duration: 0.5 }, 19.1);
+  const chairs = [];
+  const n = 6;
+  for (let i = 0; i < n; i++) {
+    const a = (i * 360 / n - 90) * Math.PI / 180;
+    const c = document.createElement("div");
+    c.className = "chair";
+    c.style.left = (540 + 330 * Math.cos(a) - 45) + "px";
+    c.style.top = (890 + 330 * Math.sin(a) - 39) + "px";
+    document.getElementById("s4").appendChild(c);
+    chairs.push(c);
+  }
+  tl.from(chairs, { scale: 0, duration: 0.5, stagger: 0.18, ease: "back.out(2)" }, 19.3);
+  tl.to("#flame", { scaleY: 1.2, scaleX: 0.88, duration: 0.18, yoyo: true, repeat: 9, ease: "sine.inOut", transformOrigin: "50% 100%" }, 19.2);
+  tl.from("#s4a", { opacity: 0, y: 30, duration: 0.6, ease }, 20.6);
+  tl.from("#s4b", { opacity: 0, y: 30, duration: 0.6, ease }, 21.1);
+  tl.to("#s4", { opacity: 0, duration: 0.4 }, 22.6);
+
+  /* Scene 5: 23-28s */
+  tl.from("#s5h", { opacity: 0, y: -50, duration: 0.7, ease }, 23.1);
+  tl.from(["#rg1", "#rg2", "#rg3"], { scale: 0, opacity: 0, duration: 1.2, stagger: 0.3, ease }, 23.5);
+  tl.from("#pin", { y: -500, opacity: 0, duration: 0.9, ease: "bounce.out" }, 24.2);
+  tl.from("#s5a", { opacity: 0, y: 30, duration: 0.6, ease }, 25.4);
+  tl.from("#s5b", { opacity: 0, y: 30, duration: 0.6, ease }, 25.9);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines.tulip = tl;
+</script>
+</body>
+</html>
